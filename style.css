@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --VerydarkblueM: hsl(217, 54%, 11%);
+    --VerydarkblueC: hsl(216, 50%, 16%);
+    --Verydarkblue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+
+font-family: 'Outfit', sans-serif;
+display: grid;
+place-content: center;
+background-color: var(--VerydarkblueM);
+height: 100vh;
+}
+
+main {
+    min-width: 330px;
+    width: 80%;
+    height: 520px;
+    background-color: var(--VerydarkblueC);
+    border-radius: 1em;
+    margin: auto;
+}
+.container{
+    position: relative;
+}
+
+.blockimage{
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50% , 0.6);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.produit, .blockimage{
+    width: 88%;
+    height: 270px;
+    margin:1.2rem;
+    background-size: cover;
+    border-radius: 0.8rem;
+}
+.zoom{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.blockimage:hover{
+opacity:1;
+cursor: pointer;
+}
+article{
+    padding: 0 1.2rem 0;
+}
+h1{
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+h1:hover , .nameuser a:hover{
+    color: var(--Cyan);
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.description, .rigth, .nameuser{
+color: var(--Softblue);
+font-weight: 300;
+font-size: 0.9em;
+
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 15px;
+}
+.icon, .time{
+    margin-right: 0.5rem;
+}
+
+.left , .rigth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.left{
+    color: var(--Cyan);
+}
+.user{
+    display: flex;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profil{
+    position: relative;
+    top:-5px;
+    width: 30px;
+    height: 30px;
+    border:1px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+.nameuser a{
+    text-decoration: none;
+    color: white;
+}
+
+.attribution {
+    margin-top: 20px; 
+    color: white;
+    font-size: 11px; 
+    text-align: center;
+ }
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
